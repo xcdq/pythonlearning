@@ -1,0 +1,11 @@
+{
+  "python.pythonPath": "C:\\Users\\xcdqa\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+  "python.linting.pylintArgs": ["--disable=W,C,E"], //忽略指定报错
+  "python.linting.enabled": false,
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace"
+  } //关闭pylint 报错 （不包括语法错误）
+}
