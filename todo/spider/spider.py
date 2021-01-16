@@ -21,7 +21,8 @@ class Spider():
     def __analysis(self, htmls):
         root_html = re.findall(Spider.root_pattern, htmls.decode('gbk'))
         name_html = re.findall(Spider.name_pattern, htmls.decode('gbk'))
-
+        for x in name_html:
+            print(x)
         a = 1
 
     def go(self):
