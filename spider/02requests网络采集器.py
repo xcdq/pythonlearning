@@ -4,12 +4,12 @@
 import requests
 url = 'https://www.sogou.com/web'
 # 处理url携带参数，封装到字典中
-kw = input('enter a word   ')
+kw = input('enter a word ')
 param = {
     'query': kw
 }
 headers = {
-    'User-Argent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.116 Safari/537.36'
+    'User-Argent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'
 }
 response = requests.get(url=url, params=param)
 page_text = response.text
