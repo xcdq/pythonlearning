@@ -14,6 +14,6 @@ headers = {
 response = requests.get(url=url, params=param)
 page_text = response.text
 fileName = kw+'.html'
-with open('./'+fileName, 'w', encoding='utf-8')as fp:
+with open('./text/'+fileName, 'w', encoding='utf-8')as fp:
     fp.write(page_text)
 print('ok')

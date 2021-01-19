@@ -7,7 +7,7 @@ response = requests.get(url=url)
 page_text = response.text
 print(page_text)
 # 4持久化存储
-with open('./sogo.html', 'w', encoding='utf-8')as fp:
+with open('./text/sogo.html', 'w', encoding='utf-8')as fp:
     fp.write(page_text)
 
 print('ok')

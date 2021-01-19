@@ -6,7 +6,7 @@ class Spider():
 
     url = 'http://txt.soushupan.xyz:18866/forum.php'
     root_pattern = '<ul class="category_newlist">([\s\S]*?)</ul>'
-    name_pattern = '<strong>([\s\S]*?)</strong>'
+    name_pattern = '标题: <strong>([\s\S]*?)</strong>'
 
     def __fetch_content(self):
         r = request.urlopen(Spider.url)
