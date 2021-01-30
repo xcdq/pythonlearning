@@ -6,7 +6,7 @@ url = 'http://pic.netbian.com/4kmeinv/index_%d.html'
 headers = {
     'User-Argent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/87.0.4280.141 Safari/537.36'
 }
-for page in range(2, 5):
+for page in range(2, 3):
     new_url = format(url % page)
     response = requests.get(url=new_url, headers=headers)
     # response.encoding = 'gbk'
