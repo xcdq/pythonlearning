@@ -1,5 +1,5 @@
 {
-  "python.pythonPath": "C:\\Users\\xcdqa\\AppData\\Local\\Programs\\Python\\Python39\\python.exe",
+  "python.pythonPath": "C:\\Users\\Administrator\\AppData\\Local\\Microsoft\\WindowsApps\\python.exe",
   "python.linting.pylintArgs": ["--disable=W,C,E"], //忽略指定报错
   "python.linting.enabled": false,
   "[json]": {
