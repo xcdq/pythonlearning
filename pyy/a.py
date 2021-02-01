@@ -1,3 +1,3 @@
-import numwords
+from numwords import count_words
 filename = 'pyy/the.txt'
-numwords.count_words(filename)
+count_words(filename)
