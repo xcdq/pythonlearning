@@ -5,7 +5,8 @@ import re
 class Spider():
 
     # url = 'http://txt.soushupan.xyz:18866/forum.php'
-    url = 'http://txt.qiyehuangyewang.com:26974/forum.php'
+    # url = 'http://txt.qiyehuangyewang.com:26974/forum.php'
+    url = 'http://txt2.qiyehuangyewang.com:2974/forum.php'
     root_pattern = '<ul class="category_newlist">([\s\S]*?)</ul>'
     name_pattern = '标题: <strong>([\s\S]*?)</strong>'
     box_pattern = '<div class=".*?box">[\s\S]*?</div>'
