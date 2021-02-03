@@ -8,7 +8,7 @@ class Ship():
         """初始化飞船并设置其初始位置"""
         self.screen = screen
         self.ai_settings = ai_settings
-        self.image = pygame.image.load('pygam/images/ship.bmp')
+        self.image = pygame.image.load('pygame/images/ship.bmp')
         self.rect = self.image.get_rect()
         self.screen_rect = screen.get_rect()
         # self.rect = self.screen_rect
