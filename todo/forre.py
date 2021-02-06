@@ -5,7 +5,11 @@ import re
 # txt = " <h2>     遇萤 <span"
 # all = re.search('h2>(.*)<span', txt)[1].strip()
 # print('a', all, 'a')
-url = 'https://img.zcool.cn/community/0137735fb3c7b311013ee04dc09f8f.jpg'
+url = "<li><a href='view-4124-6.html'>6</a></li><li><a href='view-4124-7.html'>7</a></li>"
 # pic = re.search('(.*?\.jpg)', url)[1]
-pic = re.search('community/(.*)', url)[1]
-print(pic)
+# pic = re.search('community/(.*)', url)[1]
+# print(pic)
+urls = re.findall('<li><a href=\'(.*?)\'', url, re.S)
+# findSave(url, name)
+for u in urls:
+    print(u)

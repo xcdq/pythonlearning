@@ -1,4 +1,5 @@
 from lxml import etree
+from wj import tp
 import requests
 import os
 import re
@@ -15,12 +16,12 @@ headers = {
 
 def make_dir(page_text, dx):
     """文件夹创建"""
-    src = re.search('h2>(.*?)<span', page_text, re.S)[1].strip()
+    src = re.search('h2>(.*?)<', page_text, re.S)[1].strip()
     src = src.replace('|', '')
     src += ('（高）')if dx == '2' else ('（低）')
     print(src)
-    if not os.path.exists('./text/MN/'+src):
-        os.makedirs('./text/MN/'+src)
+    if not os.path.exists(tp+src):
+        os.makedirs(tp+src)
     return src
 
 
@@ -29,13 +30,15 @@ def make_save(src, pic):
     img_data = requests.get(url=pic, headers=headers).content
     img_name = re.search('community/(.*?.jpg)', pic)[1]
     # print(img_name)
-    img_path = './text/MN/'+src+"/"+img_name
+    img_path = tp+src+"/"+img_name
     with open(img_path, 'wb')as fp:
         fp.write(img_data)
         print(img_name, '下载成功！！！')
 
 
 page_text = requests.get(url=url, headers=headers).text
+# with open('./text/zk.html', 'w') as fb:
+#     fb.write(page_text)
 tree = etree.HTML(page_text)
 pic_list = tree.xpath(
     '//*[@id="body"]/main//div[@class="photo-information-content"]/img/@src')
