@@ -5,6 +5,8 @@ from save_in import save_tp, keep_tp
 from wj import tp
 url = input('输入url：')
 uu = re.findall('(.*?)\.html', url)[0]
+name_uu = re.findall('/(\d*?)\.html', url)[0]
+
 # print(uu)
 
 
@@ -18,13 +20,16 @@ def get_txt(url):
 # txt.encode(r.encoding)
 # print(txt)
 # 页数
+tp = tp+"唯一图库\\"
 txt = get_txt(url)
 # print(re.findall('<a>共(.*)页: </a>', txt, re.S))
 if re.findall('<a>共(.*)页: </a>', txt, re.S) == []:
     # print('ok')
     name = re.findall('<img alt="(.*?)" src="', txt, re.S)[0]
+    # print(name_uu)
     name = name.replace('"', ' ')
     name = name.strip()
+    name = name_uu+name
 
     img_url = re.findall('<img alt=".*?" src="(.*?)" />', txt, re.S)[0]
     keep_tp(tp, name, name+'.jpg', img_url)
@@ -35,6 +40,7 @@ else:
     name = re.findall('<img alt="(.*?)" src="', txt, re.S)[0]
     name = name.replace('"', ' ')
     name = name.strip()
+    name = name_uu+name
 
     img_url = re.findall('<img alt=".*?" src="(.*?)" />', txt, re.S)[0]
     # print(r.encoding)
